@@ -1,4 +1,5 @@
-pandas == 2.2.3
-networkx == 3.4.2
-matplotlib == 3.10.1
-streamlit == 1.4.2
+pandas
+networkx
+matplotlib
+streamlit
+numpy
