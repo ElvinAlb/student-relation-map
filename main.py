@@ -74,7 +74,7 @@ def create_edge_data(df_network):
     for _, row in df_network.iterrows():
         person1 = row.iloc[0]
         person2 = row.iloc[1]
-        edge_data.append((person2, person1))
+        edge_data.append((person1, person2))
     return edge_data
 
 def creat_edge_color(df_network):
@@ -131,16 +131,20 @@ def download_graphs(graphs):
     )
 
 def main():
-    st.set_page_config(layout="wide")
-    st.title("Directed Network Graph with Bicolor Nodes")
-    st.write("Visualization of study domaines using directed network graph")
+    st.set_page_config(page_title="Student Relation Map",layout="wide")
+    st.title("Student Relation Map")
+    st.write("Visualization of students relations using directed network graph")
 
     # File uploaders
     st.sidebar.header("Upload Data Files")
-    network_file = st.sidebar.file_uploader("Upload Nodes Excel File (reseau-test.xlsx)", type=['xlsx'])
+    network_file = st.sidebar.file_uploader("Upload Nodes Excel File (reseauv2.xlsx)", type=['xlsx'])
 
-    df_nom, df_network_lienplus, df_network_lienmoins, df_network_cantine, df_network_orientation, df_network_fin_annee, df_network_etudes = load_data(network_file)
-    if df_nom is None or df_network_lienplus is None or df_network_lienmoins is None or df_network_cantine is None or df_network_orientation is None or df_network_fin_annee is None or df_network_etudes is None:
+    if network_file is not None:
+        df_nom, df_network_lienplus, df_network_lienmoins, df_network_cantine, df_network_orientation, df_network_fin_annee, df_network_etudes = load_data(network_file)
+        if df_nom is None or df_network_lienplus is None or df_network_lienmoins is None or df_network_cantine is None or df_network_orientation is None or df_network_fin_annee is None or df_network_etudes is None:
+            return
+    else:
+        st.info("Please upload a valid Excel file")
         return
     
     # unique_domains=get_unique_domains(df_nom, "Dom_mi année 1", "Dom_mi année 2")

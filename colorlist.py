@@ -24,7 +24,7 @@ colorlist_secteur = {
     "Arts, Lettres et Langues": "#DA4167",
     "Sciences Politiques": "#d85555",
     "Psychologie": "#9368B7",
-    "Economie, Gestion et Commerce": "#fff07c",
+    "Economie, Gestion et Commerce": "#fbb954",
     "Sciences Sociales": "#FF3333",
     "Social": "#43329a",
     "Enseignement": "#2b9348",

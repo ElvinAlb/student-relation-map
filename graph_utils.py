@@ -38,6 +38,8 @@ def create_directed_graph(sector_or_type, nodes_data, edges_data, edge_colors=No
     else:
         G.add_edges_from(edges_data)
 
+    # G_rev = nx.DiGraph().reverse(G)
+
     # Calculate layout using Fruchterman-Reingold if no positions are provided
     if node_positions is None:
         pos = nx.spring_layout(G, k=0.3, iterations=50, scale = 1)
