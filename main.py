@@ -74,7 +74,7 @@ def create_edge_data(df_network):
     for _, row in df_network.iterrows():
         person1 = row.iloc[0]
         person2 = row.iloc[1]
-        edge_data.append((person1, person2))
+        edge_data.append((person2, person1))
     return edge_data
 
 def creat_edge_color(df_network):

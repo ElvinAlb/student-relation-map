@@ -38,11 +38,9 @@ def create_directed_graph(sector_or_type, nodes_data, edges_data, edge_colors=No
     else:
         G.add_edges_from(edges_data)
 
-    # G_rev = nx.DiGraph().reverse(G)
-
     # Calculate layout using Fruchterman-Reingold if no positions are provided
     if node_positions is None:
-        pos = nx.spring_layout(G, k=0.3, iterations=50, scale = 1)
+        pos = nx.spring_layout(G, k=0.3, iterations=50)
     else:
         pos = node_positions
 
@@ -70,7 +68,7 @@ def create_directed_graph(sector_or_type, nodes_data, edges_data, edge_colors=No
     if edge_colors is not None:
         for (u, v), color in zip(edges_data, edge_colors):
             nx.draw_networkx_edges(
-                G, pos, edgelist=[(u, v)], edge_color=color,
+                G, pos, edgelist=[(v, u)], edge_color=color,
                 arrows=True, arrowsize=10, width=edge_width, arrowstyle='-|>', node_size=250, connectionstyle="arc3,rad=0.1", min_target_margin=15
             )
     else:
@@ -87,7 +85,7 @@ def create_directed_graph(sector_or_type, nodes_data, edges_data, edge_colors=No
     if colorlist:
         legend_handles = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=color, markersize=10, label=label)
                           for label, color in colorlist.items()]
-        ax.legend(handles=legend_handles, loc='upper right', title="Node Colors")
+        ax.legend(handles=legend_handles, loc='upper right', title="Légende")
 
     # Set axis properties
     ax.set_aspect('equal')
