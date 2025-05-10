@@ -217,7 +217,7 @@ def main():
     node_data_fin_annee = create_node_data_domaine(df_nom, "Domaine parcoursup")
     st.header("Liens d'amitié de fin d'année avec choix domaine")
 
-    fig7, _ = create_directed_graph("sector", node_data_fin_annee, edge_data_fin_annee, edge_color_fin_annee, edge_width=1, colorlist=colorlist_secteur, node_positions=pos)
+    fig7, _ = create_directed_graph("sector", node_data_fin_annee, edge_data_fin_annee, edge_color_fin_annee, edge_width=1, colorlist=colorlist_secteur_fin_annee, node_positions=pos)
     st.pyplot(fig7)
     graphs["Lien_d_amitie_choix_domaine_fin_annee"] = fig7
 
@@ -243,7 +243,7 @@ def main():
 
     st.header("Liens d'amitié en études sup avec choix domaine")
 
-    fig10, _ = create_directed_graph("sector", node_data_fin_annee, edge_data_etudes, edge_width=1, colorlist=colorlist_secteur, node_positions=pos)
+    fig10, _ = create_directed_graph("sector", node_data_fin_annee, edge_data_etudes, edge_width=1, colorlist=colorlist_secteur_fin_annee   , node_positions=pos)
     st.pyplot(fig10)
     graphs["Lien_d_amitie_choix_domaine_etudes_sup"] = fig10
 

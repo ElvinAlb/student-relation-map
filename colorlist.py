@@ -18,57 +18,58 @@
 # }
 
 colorlist_secteur = {
-    "Droit et Justice": "#FF92C2",
-    "Santé et Médico-social": "#cc6d5e",
-    "Sciences et Technologies": "#06d6a0",
     "Arts, Lettres et Langues": "#DA4167",
-    "Sciences Politiques": "#f0f590",
-    "Psychologie": "#9368B7",
+    "Défense et Sécurité": "#ffe3ff",
+    "Droit et Justice": "#FF92C2",
     "Economie, Gestion et Commerce": "#fbb954",
-    "Sciences Sociales": "#047168",
-    "Social": "#43329a",
     "Enseignement": "#2b9348",
     "Journalisme et Communication": "#ff5400",
     "Logistique et Transport": "#d2b48c",
-    "Sport": "#0471A6",
+    "Psychologie": "#9368B7",
+    "Santé et Médico-social": "#cc6d5e",
+    "Sciences Politiques": "#f0f590",
+    "Sciences Sociales": "#047168",
     "Sciences du vivant et de l'environnement": "#43E6D7",
-    "Défense et Sécurité": "#FFB7FF",
-    "Ne sait pas": "#d8dcf8", 
-    "Pas de vœu validé sur Parcoursup": "#999999"
+    "Sciences et Technologies": "#06d6a0",
+    "Social": "#43329a",
+    "Sport": "#0471A6",
+    "Ne sait pas": "#d8dcf8",
 }
 
 colorlist_secteur_fin_annee = {
-    "Droit et Justice": "#FF92C2",
-    "Santé et Médico-social": "#85FFC7",
-    "Sciences et Technologies": "#06d6a0",
     "Arts, Lettres et Langues": "#DA4167",
-    #"Sciences Politiques": "#d85555",
-    "Psychologie": "#9368B7",
+    "Défense et Sécurité": "#ffe3ff",
+    "Droit et Justice": "#FF92C2",
     "Economie, Gestion et Commerce": "#fbb954",
+    "Enseignement": "#2b9348",
+    "Journalisme et Communication": "#ff5400",
+    "Logistique et Transport": "#d2b48c",
+    "Psychologie": "#9368B7",
+    "Santé et Médico-social": "#cc6d5e",
+    "Sciences Politiques": "#f0f590",
     "Sciences Sociales": "#047168",
-    #"Social": "#43329a",
-    #"Enseignement": "#2b9348",
-    #"Journalisme et Communication": "#ff5400",
-    #"Logistique et Transport": "#52e3e1",
+    "Sciences du vivant et de l'environnement": "#43E6D7",
+    "Sciences et Technologies": "#06d6a0",
+    "Social": "#43329a",
     "Sport": "#0471A6",
-    #"Ne sait pas": "#d8dcf8", 
     "Pas de vœu validé sur Parcoursup": "#999999"
 }
 
+
 colorlist_pcs = {
-    "Dom_Interm": "#FF8C00",  # Nouvelle couleur attribuée
     "Dom_Cadre": "#FF92C2",
-    "Menage_Monoactif emp/ouvr": "#5FDD9D",  # Même couleur que "Santé"
-    "Dom_Employée": "#E6524C",  # Même couleur que "Ingénieurie"
-    "Menage_Inactif": "#1dd3b0",  
-    "NA": "grey"  # Même couleur que "Art, Langues et littérature"
+    "Dom_Interm": "#FF8C00", 
+    "Dom_Employée": "#E6524C",
+    "Menage_Monoactif emp/ouvr": "#5FDD9D", 
+    "Menage_Inactif": "#0471A6",  
+    "NA": "grey" 
 }
 
 colorlist_etablissement = {
-    "Université": "#118AB2",
+    "CPGE": "#EF476F",
     "Ecole publique": "#06D6A0",
     "Ecole privée": "#FFB7FF",
-    "CPGE": "#EF476F",
+    "Université": "#118AB2",
     "Pas de vœu validé sur Parcoursup": "#999999"
 }
 
