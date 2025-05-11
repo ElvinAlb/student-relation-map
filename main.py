@@ -177,17 +177,20 @@ def main():
 
     # Graph avec cantine
     edge_data_cantine = create_edge_data(df_network_cantine)
+    gray_edge_color_cantine = ["gray" for _ in range(len(edge_data_cantine))]
 
     st.header("Liens de cantine")
-    fig3, _ = create_directed_graph("simple", node_data_simple, edge_data_cantine, edge_width=1, node_positions=pos)
+    fig3, _ = create_directed_graph("simple", node_data_simple, edge_data_cantine, edge_colors=gray_edge_color_cantine, edge_width=1, node_positions=pos)
     st.pyplot(fig3)
     graphs["Liens_de_cantine"] = fig3
 
     # Graph avec orientation
     edge_data_orientation = create_edge_data(df_network_orientation)
+    gray_edge_color_orientation = ["gray" for _ in range(len(edge_data_orientation))]
+
 
     st.header("Liens d'orientation")
-    fig4, _ = create_directed_graph("simple", node_data_simple, edge_data_orientation, edge_width=1, node_positions=pos)
+    fig4, _ = create_directed_graph("simple", node_data_simple, edge_data_orientation, edge_colors=gray_edge_color_orientation, edge_width=1, node_positions=pos)
     st.pyplot(fig4)
     graphs["Liens_d_orientation"] = fig4
     # Graph avec les amitiés de milieu d’année X ce qu’ils souhaitent faire en milieu d’année
@@ -243,7 +246,7 @@ def main():
 
     st.header("Liens d'amitié en études sup avec choix domaine")
 
-    fig10, _ = create_directed_graph("sector", node_data_fin_annee, edge_data_etudes, edge_width=1, colorlist=colorlist_secteur_fin_annee   , node_positions=pos)
+    fig10, _ = create_directed_graph("sector", node_data_fin_annee, edge_data_etudes, edge_width=1, colorlist=colorlist_secteur_fin_annee, node_positions=pos)
     st.pyplot(fig10)
     graphs["Lien_d_amitie_choix_domaine_etudes_sup"] = fig10
 
